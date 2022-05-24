@@ -7,6 +7,12 @@ export function getUser() {
     return client.auth.session() && client.auth.session().user;
 }
 
+export async function getWorkshops() {
+    const response = await client.from('workshops').select('*, participants(*)');
+    return response;
+}
+
+
 export function checkAuth() {
     const user = getUser();
 
