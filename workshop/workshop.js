@@ -16,7 +16,7 @@ form.addEventListener('submit', async e => {
     const partName = formData.get('participant-name');
     const partCont = formData.get('participant-contact');
    //const enrolled = formData.get('workshop-id');
-    await createPart({ participants_name: partName, participants_cont: partCont });
+    await createPart({ participants: partName, participants_cont: partCont });
 
     form.reset();
 
@@ -44,3 +44,41 @@ window.addEventListener('load', async () => {
 
 
 });
+
+// export async function displayFamilies() {
+//     familiesEl.textContent = '';
+//     const families = await getFamilies();
+
+
+//     for (let family of families) {
+//         const familyEl = document.createElement('div');
+        
+//         familyEl.classList.add = ('family');
+//         const nameEl = document.createElement('h3');
+//         nameEl.textContent = family.name;
+        
+//         const bunnyEl = document.createElement('div');
+//         bunnyEl.classList.add = ('bunnies');
+
+    
+
+//         for (let bunny of family.fuzzy_bunnies) {
+
+//             const bunniesEl = document.createElement('div');
+//             bunniesEl.classList.add('bunny');
+//             bunniesEl.textContent = bunny.name;
+//             bunniesEl.addEventListener('click', async () => {
+//                 await deleteBunny(bunny.id);
+//                 await displayFamilies();
+//             });
+//             bunnyEl.append(bunniesEl);
+//         }
+//         familyEl.append(bunnyEl, nameEl);
+//         familiesEl.append(familyEl);
+        
+//     }
+        
+
+// }
+
+// displayFamilies();
