@@ -13,6 +13,7 @@ export async function getWorkshops() {
 }
 
 
+
 export function checkAuth() {
     const user = getUser();
 
