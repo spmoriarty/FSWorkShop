@@ -15,10 +15,10 @@ form.addEventListener('submit', async e => {
     const formData = new FormData(form);
     const partName = formData.get('participant-name');
     const partCont = formData.get('participant-contact');
-    const enrolled = formData.get('workshop-id');
-    await createPart({ enrolled: enrolled, part_name: partName, part_cont: partCont });
+   //const enrolled = formData.get('workshop-id');
+    await createPart({ participants_name: partName, participants_cont: partCont });
 
-    form.requestFullscreen();
+    form.reset();
 
 });
 
