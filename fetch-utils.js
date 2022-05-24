@@ -9,7 +9,7 @@ export function getUser() {
 
 export async function getWorkshops() {
     const response = await client.from('workshops').select('*, participants(*)');
-    return response;
+    return response.data;
 }
 
 export async function createPart(participant) {
