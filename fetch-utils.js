@@ -12,9 +12,9 @@ export async function getWorkshops() {
     return response.data;
 }
 
-export async function createPart(name) {
-    const response = await client.from('participants').insert(name);
-    return response;
+export async function createPart(participant) {
+    const response = await client.from('participants').insert(participant);
+    return response.data;
 }
 
 export function checkAuth() {

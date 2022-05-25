@@ -10,13 +10,13 @@ logoutButton.addEventListener('click', () => {
 
 const form = document.querySelector('.workshop-form');
 
-form.addEventListener('submit', async e => {
+form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const formData = new FormData(form);
     const partName = formData.get('participant-name');
     const partCont = formData.get('participant-contact');
-   //const enrolled = formData.get('workshop-id');
-    await createPart({ participants: partName, participants_cont: partCont });
+    const enrolled = formData.get('workshop-id');
+    await createPart({ name: partName, cont: partCont, workshop_id: enrolled });
 
     form.reset();
 
