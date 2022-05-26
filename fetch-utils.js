@@ -17,6 +17,11 @@ export async function createPart(participant) {
     return response.data;
 }
 
+export async function deleteParticipant(participant) {
+    const response = await client.from('participants').delete().eq('id', participant);
+    return response.data;
+}
+
 export function checkAuth() {
     const user = getUser();
 
