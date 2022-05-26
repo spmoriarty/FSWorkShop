@@ -3,7 +3,7 @@ import { getWorkshops, deleteParticipant } from '../fetch-utils.js';
 export async function displayWorkshop() {
     //familiesEl.textContent = '';
     const workShops = await getWorkshops();
-const displayShop = document.getElementById('displayWorkShop');
+    const displayShop = document.getElementById('displayWorkShop');
 
     for (let workShop of workShops) {
         const workShopEl = document.createElement('div');
