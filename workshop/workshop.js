@@ -26,8 +26,7 @@ form.addEventListener('submit', async (e) => {
 
 
 window.addEventListener('load', async () => {
-  
-    const workshopId = document.getElementById('classDisplay');
+
 
     const workshops = await getWorkshops();
         
